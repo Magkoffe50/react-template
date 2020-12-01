@@ -1,0 +1,39 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.wrap {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding-left: 25px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  border: none;
+  color: $darkColor;
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $grayColor;
+  }
+}
+
+.iconBtn {
+  position: absolute;
+  right: 25px;
+  transform: translate(0%, 50%);
+  background-color: transparent;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.normal {
+  height: 40px;
+  font-size: 16px;
+}

@@ -1,0 +1,50 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+
+.logo {
+  width: 160px;
+  margin: 0 0 32px 0;
+}
+
+.wrap {
+  width: 280px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  p {
+    text-align: center;
+  }
+}
+
+.providerButton {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px 28px 12px 20px;
+  justify-content: space-between;
+}
+
+.providerName {
+  flex: 1;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.license {
+  margin-top: 80px;
+}
+
+.licenseText {
+  text-align: center;
+}
+
+.stepContent {
+  margin-top: 64px;
+  @include flexbox();
+}

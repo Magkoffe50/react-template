@@ -1,0 +1,40 @@
+// default variables
+$defaultFlexAlign: center;
+$defaultFlexJustify: center;
+
+@mixin default-transition($property) {
+  transition: $property 0.08s ease-in-out;
+}
+
+@mixin flexbox($align: $defaultFlexAlign, $justify: $defaultFlexJustify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin backgroundImage($url, $size, $position, $repeat) {
+  background-image: url($url);
+  background-size: $size;
+  background-position: $position;
+  background-repeat: $repeat;
+}
+
+$defaultContainerWidth: 85%;
+$defaultContainerMaxWidth: 1280px;
+@mixin container($width: $defaultContainerWidth, $maxWidth: $defaultContainerMaxWidth) {
+  width: $width;
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
+
+@mixin forPhone {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin forTablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}

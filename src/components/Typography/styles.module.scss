@@ -1,0 +1,77 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.h1 {
+  font-size: 80px;
+}
+
+.h2 {
+  font-size: 64px;
+}
+
+.h3 {
+  font-size: 32px;
+}
+
+.h4 {
+  font-size: 24px;
+}
+
+.h5 {
+  font-size: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.white {
+  color: white;
+}
+
+.gray {
+  color: $grayColor;
+}
+
+.dark {
+  color: $darkColor;
+}
+
+.error {
+  color: $errorColor;
+}
+
+.success {
+  color: $successColor;
+}
+
+.p {
+  &.biggest {
+    font-size: 24px;
+  }
+  &.big {
+    font-size: 20px;
+  }
+  &.normal {
+    font-size: 16px;
+  }
+  &.sm {
+    font-size: 10px;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}

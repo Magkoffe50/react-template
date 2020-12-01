@@ -1,0 +1,112 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "EXTEND_ESLINT=true react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "yarn build && mv build/index.html build/200.html && surge -p build -d 0geyser.surge.sh"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.2.0-2",
+    "@fortawesome/fontawesome-free-brands": "^5.0.6",
+    "@fortawesome/react-fontawesome": "0.1.0-1",
+    "@metamask/onboarding": "^1.0.0",
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "connected-react-router": "^6.8.0",
+    "eslint-plugin-import": "^2.22.1",
+    "ethereum-types": "^3.2.0",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
+    "history": "^4.10.0",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.20",
+    "node-sass": "^4.14.1",
+    "numeral": "^2.0.6",
+    "qs": "^6.9.4",
+    "react": "^16.13.1",
+    "react-apollo": "^3.1.5",
+    "react-dom": "^16.13.1",
+    "react-modal": "^3.11.2",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "react-select": "^3.1.0",
+    "react-text-mask": "^5.4.3",
+    "react-toastify": "^6.0.8",
+    "react-tooltip": "^4.2.9",
+    "redux-saga": "^1.1.3",
+    "storybook": "^6.1.7",
+    "styled-components": "^5.2.1",
+    "text-mask-addons": "^3.8.0",
+    "typescript": "~3.9.3",
+    "web3": "^1.2.11",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "@babel/helper-call-delegate": "^7.11.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/axios": "^0.14.0",
+    "@types/classnames": "^2.2.10",
+    "@types/date-fns": "^2.6.0",
+    "@types/history": "^4.7.7",
+    "@types/jest": "^24.0.0",
+    "@types/lodash": "^4.14.161",
+    "@types/moment": "^2.13.0",
+    "@types/node": "^12.0.0",
+    "@types/numeral": "^0.0.28",
+    "@types/react": "^16.9.0",
+    "@types/react-big-calendar": "^0.24.6",
+    "@types/react-datepicker": "^3.1.1",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-fontawesome": "^1.6.4",
+    "@types/react-modal": "^3.10.6",
+    "@types/react-owl-carousel": "^2.3.0",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-select": "^3.0.16",
+    "@types/react-slick": "^0.23.4",
+    "@types/react-text-mask": "^5.4.6",
+    "@types/react-toastify": "^4.1.0",
+    "@types/react-tooltip": "^4.2.4",
+    "@types/redux-saga": "^0.10.5",
+    "@types/styled-components": "^5.1.4",
+    "@types/web3": "^1.2.2",
+    "@types/yup": "^0.29.6",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "plop": "^2.7.4",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "ts-loader": "^8.0.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --cache",
+      "bash -c tsc"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

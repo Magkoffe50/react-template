@@ -1,0 +1,20 @@
+@import './variables';
+
+$defaultLinkFontSize: 18px;
+$defaultLinkColor: $darkColor;
+
+@mixin linkBtn($fontSize: $defaultLinkFontSize, $color: $defaultLinkColor) {
+  display: inline-block;
+  border-bottom: 2px solid $color;
+  color: $color;
+  font-size: $fontSize;
+}
+
+.linkBig {
+  @include linkBtn(20px);
+}
+
+.link {
+  @include linkBtn;
+}
+
