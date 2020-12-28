@@ -7,7 +7,7 @@ import history from './utils/history';
 import App from './containers/App/App';
 import * as serviceWorker from './serviceWorker';
 import configureStore from './store/configureStore';
-import Web3Provider from './containers/Web3Provider';
+// import Web3Provider from './containers/Web3Provider';
 
 const store = configureStore();
 const root = document.getElementById('root');
@@ -15,9 +15,9 @@ const root = document.getElementById('root');
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Web3Provider>
-        <App />
-      </Web3Provider>
+      {/* <Web3Provider> */}
+      <App />
+      {/* </Web3Provider> */}
     </ConnectedRouter>
   </Provider>,
   root,
