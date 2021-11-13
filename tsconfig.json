@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
+    "baseUrl": "./src/",
     "lib": [
+      "es5",
+      "es6",
       "dom",
       "dom.iterable",
-      "esnext"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -17,7 +19,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "plugins": [
+      { "name": "typescript-plugin-css-modules" }
+    ]
   },
   "include": [
     "src"

@@ -2,8 +2,6 @@ module.exports = {
   extends: [
     'airbnb-typescript',
     'plugin:jest/recommended',
-    'prettier',
-    'prettier/react',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -13,16 +11,14 @@ module.exports = {
     'react/jsx-one-expression-per-line': 0,
     'react/prop-types': 0,
     'react/require-default-props': 0,
-    'operator-linebreak': ['error', 'after', {overrides: {'?': 'ignore', ':': 'ignore'}}],
+    'operator-linebreak': ['error', 'after', { overrides: { '?': 'ignore', ':': 'ignore' } }],
     'react/prefer-stateless-function': 0,
     'react/jsx-filename-extension': 0,
     'import/prefer-default-export': 0,
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 0,
     'jsx-a11y/click-events-have-key-events': 0,
     'jsx-a11y/no-static-element-interactions': 0,
     'import/no-extraneous-dependencies': 0,
-    'prettier/prettier': 0,
     'react/static-property-placement': 0,
     'import/no-named-as-default-member': 0,
     'import/no-cycle': 0,
@@ -33,6 +29,9 @@ module.exports = {
     '@typescript-eslint/dot-notation': 0,
     '@typescript-eslint/keyword-spacing': 0,
     '@typescript-eslint/lines-between-class-members': 0,
+    "@typescript-eslint/no-explicit-any": 2,
+    'object-curly-spacing': 2,
+    'no-console': 1,
   },
   overrides: [
     {
@@ -42,6 +41,7 @@ module.exports = {
       },
     },
   ],
+  ignorePatterns: '*.js',
   env: {
     browser: true,
     jest: true,
@@ -58,7 +58,6 @@ module.exports = {
     'import',
     'react-hooks',
     'jest',
-    'prettier',
     '@typescript-eslint'
   ],
 };
