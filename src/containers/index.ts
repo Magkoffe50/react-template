@@ -1,1 +1,1 @@
-export { EmployeeTable, EmployeeForm } from './Employee/index';
+export { default as Routes } from './Routes';

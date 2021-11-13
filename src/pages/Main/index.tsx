@@ -1,23 +1,25 @@
 import React from 'react';
 import styles from './styles.module.scss';
-// import { useDarkModeToggle } from '../../utils/helperHooks';
+import { useDarkModeToggle } from '../../utils/helperHooks';
 import { StyledButton as Button } from '../../components';
+import { Title } from '../../components/Title';
 
 const Main = () => {
-  // const [darkMode, toggleDarkMode] = useDarkModeToggle();
-  // console.log(darkMode);
+  const [darkMode, toggleDarkMode] = useDarkModeToggle();
+  console.log(darkMode);
   return (
     <div className={styles.main}>
-        {/* <Title>123</Title>
+        <Title>BUTTON AS BUTTON</Title>
         <Button onClick={() => toggleDarkMode()} variant='secondary'>
-          Normal
+          Change theme
         </Button>
+        <Title>BUTTON AS LINK</Title>
         <Button variant='tertiary' text='Link' to='123/' />
+        <Title>BUTTON AS ANCHOR</Title>
         <Button
           text='href'
           href='https://reactrouter.com/web/guides/quick-start'
-        /> */}
-        <Button variant='tertiary' text='EldisSoft' to='eldis/' />
+        />
     </div>
   );
 };
