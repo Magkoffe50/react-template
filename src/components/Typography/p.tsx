@@ -1,7 +1,7 @@
 import React, { FC, PropsWithChildren } from 'react';
 import cx from 'classnames';
 import styles from './styles.module.scss';
-import {TextAlign, TextColor, TextSize} from '../../types/components/typography';
+import { TextAlign, TextColor, TextSize } from '../../types/components/typography';
 
 type Props = {
   className?: string,
@@ -16,7 +16,7 @@ type Props = {
 const P: FC<PropsWithChildren<Props>> = ({
   children,
   className,
-  style = { },
+  style = {},
   size = 'normal',
   color = 'dark',
   align = 'left',

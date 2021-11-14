@@ -1,6 +1,4 @@
-import type {
-  Action,
-} from '../../types';
+import type { Action } from '../../types';
 
 const SET_METAMASK_STATUS = 'SET_METAMASK_STATUS';
 const SET_ETH_ADDRESS = 'SET_ETH_ADDRESS';
@@ -15,11 +13,11 @@ export type StopOnboarding = Action<typeof STOP_ONBOARDING, any>;
 export type ChooseProvider = Action<typeof CHOOSE_PROVIDER, any>;
 
 export type Web3Action =
-  SetMetamaskStatusAction
-  | SetETHAddress
-  | StartOnboarding
-  | StopOnboarding
-  | ChooseProvider;
+    SetMetamaskStatusAction
+    | SetETHAddress
+    | StartOnboarding
+    | StopOnboarding
+    | ChooseProvider;
 
 export default {
   SET_METAMASK_STATUS,

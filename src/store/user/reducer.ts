@@ -3,7 +3,7 @@ import actionTypes from './actionTypes';
 const initialState = {
   darkMode: false,
 };
-
+// eslint-disable-next-line
 export default (state = initialState, action: any) => {
   switch (action.type) {
     case actionTypes.TOGGLE_DARK_MODE: {

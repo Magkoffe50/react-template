@@ -11,12 +11,11 @@ function App() {
   );
 }
 
-const Providers: React.FC = ({ children }) => {
-  return (
-    <>
-      <ThemeProvider>{children}</ThemeProvider>
-    </>
-  );
-};
+const Providers: React.FC = ({ children }) => (
+  <>
+    <ThemeProvider> {children}
+    </ThemeProvider>
+  </>
+);
 
 export default App;

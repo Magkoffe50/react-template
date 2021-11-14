@@ -1,8 +1,9 @@
-import { takeLeading, put, select, call } from 'redux-saga/effects';
+import {
+  call, put, select, takeLeading,
+} from 'redux-saga/effects';
 import MetamaskOnboarding from '@metamask/onboarding';
-import {setEthAddress, setMetamaskStatus} from '../actions';
+import { setEthAddress, setMetamaskStatus } from '../actions';
 import actionTypes from '../actionTypes';
-
 
 // @ts-ignore
 const onboarding = new MetamaskOnboarding(window.location.origin);
@@ -15,8 +16,8 @@ function* onAccountsChange(accounts: any) {
 
 function* chooseProviderSaga(): Iterable<any> {
   try {
-    const accounts = yield select(state => state.web3.accounts);
-    const metamaskStatus = yield select(state => state.web3.metamaskStatus);
+    const accounts = yield select((state) => state.web3.accounts);
+    const metamaskStatus = yield select((state) => state.web3.metamaskStatus);
     if (metamaskStatus === 'NOT_AVAILABLE') {
       onboarding.startOnboarding();
       // @ts-ignore
@@ -33,7 +34,7 @@ function* chooseProviderSaga(): Iterable<any> {
       // @ts-ignore
       window.ethereum.on('accountsChanged', onAccountsChange);
     }
-  } catch(err) {
+  } catch (err) {
     yield 123;
   }
 }

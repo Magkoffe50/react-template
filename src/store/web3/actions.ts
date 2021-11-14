@@ -1,6 +1,5 @@
 import actionTypes from './actionTypes';
 
-
 export const setMetamaskStatus = (payload: any) => ({
   type: actionTypes.SET_METAMASK_STATUS,
   payload,

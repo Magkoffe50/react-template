@@ -1,21 +1,19 @@
 import React from 'react';
 import ConnectAccountStep from './ConnectAccountStep';
 import styles from './styles.module.scss';
-import {Spinner} from '../index';
+import { Spinner } from '../index';
 
-const Connecting = () => {
-  return (
-    <ConnectAccountStep
-      title="Unlock Wallet"
-      description="You may need to click the extension"
-    >
-      <div className={styles.row}>
-        <div className={styles.stepContent}>
-          <Spinner />
-        </div>
+const Connecting = () => (
+  <ConnectAccountStep
+    title="Unlock Wallet"
+    description="You may need to click the extension"
+  >
+    <div className={styles.row}>
+      <div className={styles.stepContent}>
+        <Spinner />
       </div>
-    </ConnectAccountStep>
-  );
-};
+    </div>
+  </ConnectAccountStep>
+);
 
 export default Connecting;

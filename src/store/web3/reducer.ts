@@ -1,7 +1,5 @@
-
-
-import {Web3State} from '../../types/store';
-import actionTypes, {Web3Action} from './actionTypes';
+import { Web3State } from '../../types/store';
+import actionTypes, { Web3Action } from './actionTypes';
 
 const initialState: Web3State = {
   metamaskStatus: 'NOT_AVAILABLE',

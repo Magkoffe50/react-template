@@ -22,7 +22,7 @@ const Preloader: FC<PropsWithChildren<Props>> = ({
   size = 'normal',
 }) => (
   <>
-    {isLoading ?
+    {isLoading ? (
       <div
         className={cx(
           styles.preloader,
@@ -34,15 +34,16 @@ const Preloader: FC<PropsWithChildren<Props>> = ({
         <span />
         <span />
       </div>
-      :
-      <>
-        {isNoDataContainerVisible && !length ?
-          <div className={styles.noDataFound}>
-            {noDataContainer}
-          </div> : children
-        }
-      </>
-    }
+    )
+      : (
+        <>
+          {isNoDataContainerVisible && !length ? (
+            <div className={styles.noDataFound}>
+              {noDataContainer}
+            </div>
+          ) : children}
+        </>
+      )}
   </>
 );
 

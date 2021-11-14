@@ -1,5 +1,5 @@
 // import type { UIAction } from './actions';
-import {UIState} from '../../types/store';
+import { UIState } from '../../types/store';
 
 const initialState: UIState = {
   TOKEN_GEYSER_DEPOSIT: 'INIT',
@@ -22,7 +22,7 @@ export default (state: UIState = initialState, action: any): UIState => {
   const [, requestName, requestState] = matches;
 
   if (requestState === 'ERROR') {
-    const message  = action.payload?.message;
+    const message = action.payload?.message;
     return {
       ...state,
       [requestName]: requestState,

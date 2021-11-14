@@ -75,7 +75,7 @@ const Button: React.FC<ButtonProps> = ({
     }
     if (href) {
       return (
-        <StyledExternalLink href={href} target='__blank'>
+        <StyledExternalLink href={href} target="__blank">
           {text}
         </StyledExternalLink>
       );
@@ -117,8 +117,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   justify-content: center;
   align-items: center;
   color: ${(props) => (!props.disabled ? props.color : `${props.color}`)};
-  background: ${(props) =>
-    !props.disabled ? props.background : `${props.background}`};
+  background: ${(props) => (!props.disabled ? props.background : `${props.background}`)};
   box-shadow: ${(props) => props.boxShadow};
 
   font-size: ${(props) => props.fontSize}px;
@@ -134,6 +133,7 @@ const StyledButton = styled.button<StyledButtonProps>`
 
   outline: none;
   cursor: pointer;
+
   &:hover {
     background-color: ${(props) => props.theme.shadow1};
   }

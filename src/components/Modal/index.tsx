@@ -1,4 +1,4 @@
-import React, {ReactNode, useEffect} from 'react';
+import React, { ReactNode, useEffect } from 'react';
 import RModal from 'react-modal';
 import cx from 'classnames';
 import styles from './styles.module.scss';
@@ -11,7 +11,9 @@ type Props = {
   closeMs?: number,
 };
 
-const Modal = ({children = null, onClose, isOpen, className, closeMs = 0}: Props) => {
+const Modal = ({
+  children = null, onClose, isOpen, className, closeMs = 0,
+}: Props) => {
   useEffect(() => {
     if (isOpen && closeMs > 0) {
       setTimeout(() => onClose(), closeMs);

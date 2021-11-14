@@ -1,7 +1,4 @@
-import {
-  css,
-  ThemeProvider as StyledComponentsThemeProvider,
-} from 'styled-components';
+import { css, ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
 import React, { useMemo } from 'react';
 import { useIsDarkMode } from '../utils/helperHooks';
 import { Colors } from '../types/theme/index';
@@ -17,10 +14,10 @@ const mediaWidthTemplates: {
   [width in keyof typeof MEDIA_WIDTHS]: typeof css;
 } = Object.keys(MEDIA_WIDTHS).reduce((accumulator, size) => {
   (accumulator as any)[size] = (a: any, b: any, c: any) => css`
-    @media (max-width: ${(MEDIA_WIDTHS as any)[size]}px) {
-      ${css(a, b, c)}
-    }
-  `;
+      @media (max-width: ${(MEDIA_WIDTHS as any)[size]}px) {
+        ${css(a, b, c)}
+      }
+    `;
   return accumulator;
 }, {}) as any;
 
@@ -97,13 +94,13 @@ export function theme(darkMode: boolean) {
 
     // css snippets
     flexColumnNoWrap: css`
-      display: flex;
-      flex-flow: column nowrap;
-    `,
+          display: flex;
+          flex-flow: column nowrap;
+        `,
     flexRowNoWrap: css`
-      display: flex;
-      flex-flow: row nowrap;
-    `,
+          display: flex;
+          flex-flow: row nowrap;
+        `,
   };
 }
 

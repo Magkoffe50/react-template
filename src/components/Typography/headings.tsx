@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import cx from 'classnames';
 import styles from './styles.module.scss';
-import {HeadingType, TextAlign, TextColor} from '../../types/components/typography';
+import { HeadingType, TextAlign, TextColor } from '../../types/components/typography';
 
 type Props = {
   children: ReactNode,
